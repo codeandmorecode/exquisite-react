@@ -12,6 +12,8 @@ const Game = () => {
       return field;
     }
   }).join(' ');
+  
+  console.log(lines);
 
   return (
     <div className="Game">
@@ -27,7 +29,7 @@ const Game = () => {
 
       <RecentSubmission />
 
-      <PlayerSubmissionForm />
+      <PlayerSubmissionForm addLine={addLine}/>
 
       <FinalPoem />
 
