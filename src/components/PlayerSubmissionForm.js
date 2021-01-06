@@ -23,13 +23,17 @@ const PlayerSubmissionForm = (props) => {
     setFormFields(newFormFields);
   }
   
-  
+  const onSubmitFunction = (event) => {
+    event.preventDefault()
+    props.addLine(formFields)
+    console.log('in onSubmitFunction')
+}
   
   return (
     <div className="PlayerSubmissionForm">
       <h3>Player Submission Form for Player #{  }</h3>
 
-      <form className="PlayerSubmissionForm__form" >
+      <form className="PlayerSubmissionForm__form" onSubmit={onSubmitFunction}>
 
       
         <div className="PlayerSubmissionForm__poem-inputs">
