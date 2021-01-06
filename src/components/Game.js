@@ -13,7 +13,17 @@ const Game = () => {
     }
   }).join(' ');
   
-  console.log(lines);
+  const [lines, setLines] = useState([])
+
+  const addLine = (line) => {
+    console.log('in add line');
+    console.log(line);
+    const newLine = [
+      ...lines,
+  ]
+    newLine.push(line);
+    setLines(newLine);
+  }
 
   return (
     <div className="Game">
