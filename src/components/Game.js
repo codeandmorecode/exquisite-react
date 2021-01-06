@@ -24,6 +24,8 @@ const Game = () => {
     newLine.push(line);
     setLines(newLine);
   }
+  
+  console.log(lines)
 
   return (
     <div className="Game">

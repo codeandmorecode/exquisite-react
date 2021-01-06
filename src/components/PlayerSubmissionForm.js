@@ -24,9 +24,17 @@ const PlayerSubmissionForm = (props) => {
   }
   
   const onSubmitFunction = (event) => {
-    event.preventDefault()
-    props.addLine(formFields)
-    console.log('in onSubmitFunction')
+    event.preventDefault();
+    props.addLine(formFields);
+    setFormFields({
+      word1: '',
+      word2: '',
+      word3: '',
+      word4: '',
+      word5: '',
+      word6: '',
+    })
+
 }
   
   return (
