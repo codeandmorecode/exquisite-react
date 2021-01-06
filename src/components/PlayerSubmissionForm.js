@@ -13,6 +13,8 @@ const PlayerSubmissionForm = (props) => {
     word6: '',
   })
 
+  const [player, setPlayer] = useState(1)
+
   const onWordChange = (event) => {
     const key = event.target.name;
     const value = event.target.value;
@@ -34,12 +36,13 @@ const PlayerSubmissionForm = (props) => {
       word5: '',
       word6: '',
     })
+    setPlayer(player + 1)
 
 }
   
   return (
     <div className="PlayerSubmissionForm">
-      <h3>Player Submission Form for Player #{  }</h3>
+      <h3>Player Submission Form for Player #{player}</h3>
 
       <form className="PlayerSubmissionForm__form" onSubmit={onSubmitFunction}>
 
