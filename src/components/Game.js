@@ -27,7 +27,7 @@ const Game = () => {
 
   const lastLine = () => {
     if (lines.length == 0){
-      return null
+      return ''
     }else{
       return lines[lines.length - 1]
     }
@@ -49,14 +49,16 @@ const Game = () => {
         { exampleFormat }
       </p>
 
-      <RecentSubmission submission={lastLine()}/>
+      {poemIsSubmitted || <RecentSubmission submission={lastLine()}/>}
 
-      {poemIsSubmitted || <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>}
+      {poemIsSubmitted || <PlayerSubmissionForm fields={FIELDS} sendSubmission={addLine} index={lines.length + 1}/>}
 
       <FinalPoem submissions={lines} revealPoem={revealPoem} isSubmitted={poemIsSubmitted}/>
 
     </div>
   );
+  
+      {/* alternatively: {poemIsSubmitted? null : <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>} */}
 }
 
 

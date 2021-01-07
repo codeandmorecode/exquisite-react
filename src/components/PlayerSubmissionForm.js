@@ -50,6 +50,7 @@ const PlayerSubmissionForm = (props) => {
 
           {
             // Put your form inputs here... We've put in one below as an example
+           //<input className={formFields.word1===''? 'PlayerSubmissionFormt__input--invalid' : ''}
           }
           <p>The</p>
           <input

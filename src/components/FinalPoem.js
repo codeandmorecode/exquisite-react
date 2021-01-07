@@ -8,9 +8,9 @@ const FinalPoem = (props) => {
     result = (
       <section className="FinalPoem__poem"> 
       <h3>Final Poem</h3>
-      {props.submissions.map((line) => {
+      {props.submissions.map((line, i) => {
         return (
-          <p>{line}</p>
+          <p key={i}>{line}</p>
         )
       })}
     </section>

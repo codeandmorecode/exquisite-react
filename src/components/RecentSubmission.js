@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './RecentSubmission.css';
 
 const RecentSubmission = (props) => {
-  if (props.submission === null){
+  if (props.submission === ''){
     return null;
   }else{
     return (
