@@ -53,39 +53,39 @@ const PlayerSubmissionForm = (props) => {
           }
           <p>The</p>
           <input
-            placeholder="adjective"
+            placeholder="adjective1"
             type="text" 
             name="word1"
             onChange={onWordChange}
             value={formFields.word1}/>
           <input
-            placeholder="noun"
+            placeholder="noun1"
             type="text"
             name="word2"
             onChange={onWordChange}
             value={formFields.word2}
             />
             <input
-            placeholder="adverb"
+            placeholder="adverb1"
             type="text"
             name="word3"
             onChange={onWordChange}
             value={formFields.word3}/> 
           <input
-            placeholder="verb"
+            placeholder="verb1"
             type="text"
             name="word4"
             onChange={onWordChange}
             value={formFields.word4}/>
           <p>the</p>
           <input
-            placeholder="adjective"
+            placeholder="adjective2"
             type="text"
             name="word5"
             onChange={onWordChange}
             value={formFields.word5}/> 
           <input
-            placeholder="noun"
+            placeholder="noun2"
             type="text"
             name="word6"
             onChange={onWordChange}
