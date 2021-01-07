@@ -51,7 +51,7 @@ const Game = () => {
 
       <RecentSubmission submission={lastLine()}/>
 
-      <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>
+      {poemIsSubmitted || <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>}
 
       <FinalPoem submissions={lines} revealPoem={revealPoem} isSubmitted={poemIsSubmitted}/>
 
