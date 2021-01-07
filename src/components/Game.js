@@ -14,6 +14,7 @@ const Game = () => {
   }).join(' ');
   
   const [lines, setLines] = useState([])
+  const [poemIsSubmitted, setPoemState] = useState(false)
 
   const addLine = (line) => {
     const newLines = [
@@ -33,7 +34,7 @@ const Game = () => {
   }
 
   const revealPoem = () => {
-
+    setPoemState(true)
   }
 
   return (
@@ -48,11 +49,11 @@ const Game = () => {
         { exampleFormat }
       </p>
 
-      <RecentSubmission submission={lastLine}/>
+      <RecentSubmission submission={lastLine()}/>
 
       <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>
 
-      <FinalPoem submissions={lines} revealPoem={revealPoem}/>
+      <FinalPoem submissions={lines} revealPoem={revealPoem} isSubmitted={poemIsSubmitted}/>
 
     </div>
   );
