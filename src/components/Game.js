@@ -24,10 +24,18 @@ const Game = () => {
     setLines(newLines);
   }
 
+  const lastLine = () => {
+    if (lines.length == 0){
+      return null
+    }else{
+      return lines[lines.length - 1]
+    }
+  }
+
   const revealPoem = () => {
 
   }
-  
+
   return (
     <div className="Game">
       <h2>Game</h2>
@@ -40,7 +48,7 @@ const Game = () => {
         { exampleFormat }
       </p>
 
-      <RecentSubmission />
+      <RecentSubmission submission={lastLine}/>
 
       <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>
 
