@@ -16,17 +16,18 @@ const Game = () => {
   const [lines, setLines] = useState([])
 
   const addLine = (line) => {
-    // console.log('in add line');
-    // console.log(line);
-    const newLine = [
+    const newLines = [
       ...lines,
   ]
-    newLine.push(line);
-    setLines(newLine);
+    const newSentence = `The ${line.word1} ${line.word2} ${line.word3} ${line.word4} the ${line.word5} ${line.word6}.`
+    newLines.push(newSentence);
+    setLines(newLines);
   }
 
-  console.log(lines)
+  const revealPoem = () => {
 
+  }
+  
   return (
     <div className="Game">
       <h2>Game</h2>
@@ -43,7 +44,7 @@ const Game = () => {
 
       <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>
 
-      <FinalPoem />
+      <FinalPoem submissions={lines} revealPoem={revealPoem}/>
 
     </div>
   );

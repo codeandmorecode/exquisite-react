@@ -8,7 +8,12 @@ const FinalPoem = (props) => {
     <div className="FinalPoem">
       <section className="FinalPoem__poem">
         <h3>Final Poem</h3>
-
+        {props.submissions.map((line) => {
+          return (
+            <p>{line}</p>
+          )
+        })
+        }
       </section>
 
       <div className="FinalPoem__reveal-btn-container">
