@@ -16,15 +16,15 @@ const Game = () => {
   const [lines, setLines] = useState([])
 
   const addLine = (line) => {
-    console.log('in add line');
-    console.log(line);
+    // console.log('in add line');
+    // console.log(line);
     const newLine = [
       ...lines,
   ]
     newLine.push(line);
     setLines(newLine);
   }
-  
+
   console.log(lines)
 
   return (
@@ -41,7 +41,7 @@ const Game = () => {
 
       <RecentSubmission />
 
-      <PlayerSubmissionForm addLine={addLine}/>
+      <PlayerSubmissionForm sendSubmission={addLine} index={lines.length + 1}/>
 
       <FinalPoem />
 

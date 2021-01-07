@@ -13,7 +13,7 @@ const PlayerSubmissionForm = (props) => {
     word6: '',
   })
 
-  const [player, setPlayer] = useState(1)
+  // const [player, setPlayer] = useState(1)
 
   const onWordChange = (event) => {
     const key = event.target.name;
@@ -27,7 +27,7 @@ const PlayerSubmissionForm = (props) => {
   
   const onSubmitFunction = (event) => {
     event.preventDefault();
-    props.addLine(formFields);
+    props.sendSubmission(formFields);
     setFormFields({
       word1: '',
       word2: '',
@@ -36,13 +36,12 @@ const PlayerSubmissionForm = (props) => {
       word5: '',
       word6: '',
     })
-    setPlayer(player + 1)
-
+    // setPlayer(player + 1)
 }
   
   return (
     <div className="PlayerSubmissionForm">
-      <h3>Player Submission Form for Player #{player}</h3>
+      <h3>Player Submission Form for Player #{props.index}</h3>
 
       <form className="PlayerSubmissionForm__form" onSubmit={onSubmitFunction}>
 
@@ -52,8 +51,6 @@ const PlayerSubmissionForm = (props) => {
           {
             // Put your form inputs here... We've put in one below as an example
           }
-          {/* <label htmlFor="fullName">Name:</label>
-          <input name="fullname"/> */}
           <p>The</p>
           <input
             placeholder="adjective"
